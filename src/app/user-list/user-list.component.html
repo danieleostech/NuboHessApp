@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-12 px-3 py-3 bg-light text-center">
+      <button class="btn btn-outline-dark mx-2" (click)="loadUsers()">Descargar usuarios</button>
+      <button class="btn btn-outline-dark mx-2" routerLink="/crearUsuario">Crear usuario</button>
+      <button class="btn btn-outline-dark mx-2" routerLink="/login">Ir al login</button>
+    </div>
+  </div>
+<table class="table">
+    <caption>
+      Lista de usuarios
+    </caption>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Usuario</th>
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Estatus</td>
+        <td>Tipo de usuario</td>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of User.lstUsers">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.status}}</td>
+        <td>{{user.userType}}</td>
+        <td>
+          <button class="btn btn-outline-dark w-75" (click)="loadUsers()">Update User</button>
+        </td>
+        <td>
+          <button class="btn btn-outline-dark w-75" (click)="loadUsers()">Delete User</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,24 @@
+<div class="col-sm-12 offset-sm-0 col-md-4 offset-md-4">
+  <h3 class="mb-3 text-center">Crear usuario</h3>
+
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" [(ngModel)]="userDetails.name" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="Tipo">Tipo</label>
+    <input type="number" [(ngModel)]="userDetails.type" class="form-control" min="0">
+  </div>
+
+  <div class="form-group">
+    <label for="status">Estatus</label>
+    <input type="number" [(ngModel)]="userDetails.status" class="form-control" min="0">
+  </div>
+
+  <div class="form-group">
+      <button class="btn btn-outline-dark mx-2" routerLink="/listaUsuarios">Volver a la lista</button>
+    <button class="btn btn-outline-dark" (click)="addUser()">Crear usuario</button>
+  </div>
+
+</div>
